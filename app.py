@@ -86,7 +86,7 @@ def create_quantum_circuit(num_qubits):
 
 def run_quantum_circuit(qc):
     backend = Aer.get_backend("qasm_simulator")
-    job = execute(qc, backend, shots=1)
+    job = execute(qc, backend, shots=1024)
     result = job.result()
     counts = result.get_counts()
     outcome = list(counts.keys())[0]
