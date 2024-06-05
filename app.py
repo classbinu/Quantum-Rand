@@ -49,9 +49,7 @@ def display_steps(max_number, final_number, binary_outcome):
     progress_bar.progress(60)
     time.sleep(1)
 
-    status_message.text(
-        "Putting qubits into superposition states using Hadamard gates..."
-    )
+    status_message.text("Applying H-gates for superposition...")
     progress_bar.progress(80)
     time.sleep(1)
 
@@ -59,9 +57,7 @@ def display_steps(max_number, final_number, binary_outcome):
     progress_bar.progress(100)
     time.sleep(1)
 
-    status_message.text(
-        f"The final number generated is: {final_number} ({binary_outcome})"
-    )
+    status_message.text(f"Final result: {final_number} ({binary_outcome})")
 
 
 st.title("Quantum Random Number Generator")
