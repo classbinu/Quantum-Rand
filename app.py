@@ -61,7 +61,7 @@ def display_steps(max_number, final_number, binary_outcome):
 
 
 st.title("Quantum Random Number Generator")
-st.subheader("By Block-S Dev Team for Lunch")
+st.subheader("By BS Dev Team for Lunch")
 max_number = st.number_input(
     "Enter the maximum number (n):", min_value=1, max_value=9999, value=4
 )
