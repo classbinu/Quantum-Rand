@@ -35,27 +35,33 @@ def display_steps(max_number, final_number, binary_outcome):
     num_qubits = max_number.bit_length()
     progress_bar = st.progress(0)
 
-    st.write("Generating quantum states...")
+    status_message = st.empty()
+
+    status_message.text("Generating quantum states...")
     progress_bar.progress(20)
     time.sleep(1)
 
-    st.write(f"Creating {num_qubits} qubits...")
+    status_message.text(f"Creating {num_qubits} qubits...")
     progress_bar.progress(40)
     time.sleep(1)
 
-    st.write(f"Creating {num_qubits} classical bits...")
+    status_message.text(f"Creating {num_qubits} classical bits...")
     progress_bar.progress(60)
     time.sleep(1)
 
-    st.write("Putting qubits into superposition states using Hadamard gates...")
+    status_message.text(
+        "Putting qubits into superposition states using Hadamard gates..."
+    )
     progress_bar.progress(80)
     time.sleep(1)
 
-    st.write("Measuring qubits...")
+    status_message.text("Measuring qubits...")
     progress_bar.progress(100)
     time.sleep(1)
 
-    st.write(f"The final number generated is: {final_number} ({binary_outcome})")
+    status_message.text(
+        f"The final number generated is: {final_number} ({binary_outcome})"
+    )
 
 
 st.title("Quantum Random Number Generator")
